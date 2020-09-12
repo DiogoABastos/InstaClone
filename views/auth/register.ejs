@@ -1,0 +1,52 @@
+<div class="container register-container">
+  <div class="row">
+    <div class="col col-2"></div>
+    <div class="col col-8">
+      <div class="card margin">
+        <div class="card-body middle">
+          <h1 class="logo">Insta<span>Clone</span></h1>
+          <h3 class="page">Register</h3>
+          <div>
+            <%- include('../partials/messages') %>
+          </div>
+          <form action="/auth/register" method="POST">
+            <div class="form-group">
+              <input type="text" name="firstName" id="firstName" placeholder="Firstname" class="form-control lower-font">
+            </div>
+            <div class="form-group">
+              <input type="text" name="lastName" id="lastName" placeholder="Lastname" class="form-control lower-font">
+            </div>
+            <div class="form-group">
+              <input type="text" name="nickname" id="nickname" placeholder="Nickname" class="form-control lower-font">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email" placeholder="Email" class="form-control lower-font">
+            </div>
+            <div class="form-group">
+              <select name="status" id="status" class="form-control lower-font">
+                <option value="" disabled selected>Status</option>
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password" placeholder="Password" class="form-control lower-font">
+            </div>
+            <div class="form-group">
+              <input type="password" name="pass2" id="pass2" placeholder="Confirm password" class="form-control lower-font">
+            </div>
+            <button type="submit" class="btn btn-primary lower-font">Register</button>
+          </form>
+        </div>
+      </div>
+      <div class="card margin">
+        <div class="card-body middle">
+          <p class="change">Have an account? <strong><a href="/auth/login">Login</a></strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="col col-2"></div>
+  </div>
+</div>
+
+

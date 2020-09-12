@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col col-4"></div>
+  <div class="col col-4 profile-info edit-profile-page">
+    <div class="border-img">
+      <div class="profile-picture">
+        <img src="/imgs/placeholder.jpeg" alt="Profile Picture">
+      </div>
+    </div>
+    <div class="edit-profile-error-messages">
+      <%- include('../partials/messages') %>
+    </div>
+    <form action="/users/<%= currentUser._id %>" method="POST">
+      <input type="hidden" name="_method" value="PUT">
+    <h3 class="name">
+      <div class="row">
+        <div class="form-group col col-6">
+          <input type="text" name="firstName" placeholder="Firstname" class="form-control" value="<%= typeof user.firstName != 'undefined' ? user.firstName : '' %>">
+        </div>
+        <div class="form-group col col-6">
+          <input type="text" name="lastName" placeholder="lastName" class="form-control" value="<%= typeof user.lastName != 'undefined' ? user.lastName : '' %>">
+        </div>
+      </div>
+    </h3>
+    <p class="city">
+      <input type="text" name="city" placeholder="City" class="form-control city-form" value="<%= typeof user.city != 'undefined' ? user.city : '' %>">
+    </p>
+
+    <div class="info-div">
+        <div>
+          <ul class="info">
+            <li>Posts</li>
+            <li><%= posts.length %></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="info">
+            <li>Followers</li>
+            <li><%= followers.length %></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="info">
+            <li>Following</li>
+            <li><%= following.length %></li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+
+    <h5 class="nickname">
+      <div class="form-row">
+        <div class="col col-1 at-relative">
+          <span class="at">@</span>
+        </div>
+        <div class="col col-11">
+          <input type="text" name="nickname" placeholder="Nickname" class="form-control" value="<%= typeof user.nickname != 'undefined' ? user.nickname : '' %>">
+        </div>
+      </div>
+    </h5>
+    <p class="resume">
+      <textarea name="resume" id="resume" cols="10" rows="5" class="none-resize form-control" aria-describedby="resumeHelp"><%= typeof user.resume != 'undefined' ? user.resume : '' %></textarea>
+      <small id="resumeHelp" class="form-text text-muted">200 characters max</small>
+    </p>
+    <button type="submit" class="btn btn-primary update-btn">Update Profile</button>
+    </form>
+  </div>
+  <div class="col col-4"></div>
+</div>

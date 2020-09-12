@@ -1,0 +1,457 @@
+:root {
+  --color-grey: rgba(50, 50, 50, 0.3);
+}
+
+body {
+  background-color: rgba(200, 200, 200, 0.1);
+}
+
+/*.photo {
+  width: 40%;
+  height: 40%;
+  margin-right: 5px;
+}
+
+.posts-profile {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts-profile div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.posts-profile p {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.posts-profile a {
+  width: 100%;
+  height: 35%;
+  font-size: 12px;
+  color: var(--color-grey);
+}
+
+.posts-profile a:hover {
+  text-decoration: none;
+  color: rgba(10, 10, 10, 0.3);
+}*/
+
+.lower-font {
+  font-size: 14px;
+}
+
+.read {
+  background-color: rgba(50, 50, 150, 0.1);
+}
+
+.none-resize {
+  resize: none;
+}
+
+.middle {
+  text-align: center;
+}
+
+.margin {
+  margin-top: 10px;
+}
+
+.edit-logo {
+  font-weight: 900;
+}
+
+.edit-logo > span {
+  font-weight: 100;
+}
+
+.notifications-li {
+  position: relative;
+}
+
+.notifications-number {
+  border-radius: 50%;
+  padding: 2px;
+  background-color: red;
+  color: white;
+  font-weight: 700;
+  font-size: 8px;
+  position: absolute;
+  right: 7px;
+  top: 3px;
+}
+
+.notifications {
+  background-color: white;
+  display: inline-block;
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  z-index: 10;
+  width: 200px;
+  max-height: 200px;
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+
+.show {
+  display: inline-block;
+}
+
+.notifications > div {
+  width: 100%;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.notifications > div > p {
+  padding: 0;
+  margin: 0;
+}
+
+.notification {
+  color: black;
+}
+
+.notification:hover {
+  text-decoration: none;
+  color: var(--color-grey);
+}
+
+.red {
+  color: rgba(250, 50, 50, 1);
+}
+
+.like-btn {
+  color: black;
+}
+
+.like-btn:hover {
+  color: rgba(250, 50, 50, 1);
+}
+
+.navbar {
+  padding: 8px;
+  background-color: white;
+  box-shadow: 0 1px 1px grey;
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo > h5 {
+  margin-top: 5px;
+  margin-right: 100px;
+}
+
+.search-form input {
+  height: 50%;
+}
+
+.search {
+  color: grey;
+  position: relative;
+  right: 25px;
+}
+
+.options > ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.options > ul li {
+  display: inline;
+  padding: 10px;
+}
+
+.options > ul li > a {
+  color: rgba(0, 0, 0, 1);
+  transition: all 0.2s ease;
+}
+
+.options > ul li > a:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.logo > h5 {
+  font-weight: 900;
+}
+
+.logo > h5 > span {
+  font-weight: 200;
+}
+
+.options .new-post {
+  height: 30px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.profile-info > .border-img {
+  height: 130px;
+  width: 130px;
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 2px solid white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.profile-info .name {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.profile-info .city {
+  font-size: 14px;
+  color: rgba(50, 50, 50, 0.3);
+}
+
+.profile-info .info-div {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.profile-info .info-div .info {
+  list-style: none;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 20px;
+  padding: 0;
+}
+
+.profile-info .nickname {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.profile-info .resume {
+  overflow-wrap: break-word;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-wieght: lighter;
+  margin-top: 20px;
+}
+
+.profile-posts {
+  margin-top: 20px;
+}
+
+.post {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 2px 2px 5px grey;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.post > .info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.post > .info > img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post > .info > a {
+  font-size: 15px;
+  margin-top: 2px;
+  font-weight: 500;
+  color: black;
+}
+
+.post > .info > a:hover {
+  text-decoration: none;
+  color: rgba(50, 100, 200, 0.6);
+}
+
+.post > .body {
+  width: 90%;
+  overflow: auto;
+  overflow-wrap: break-word;
+  padding-bottom: 5px;
+  text-align: justify;
+  text-justify: inter-word;
+  max-height: 300px;
+  margin-left: 20px;
+}
+
+.post > .action {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.post > .action > .first i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.post > .action > .second i {
+  font-size: 18px;
+}
+
+.verified {
+  color: blue;
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+.profile-choice {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-choice > .choices {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adjust-width {
+  width: 70%;
+}
+
+.profile-choice .possibilities {
+  margin-bottom: 20px;
+  color: rgba(50, 50, 50, 0.3);
+  transition: all 0.2s ease;
+}
+
+.profile-choice .possibilities:hover {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.profile-choice .selected {
+  color: #0275d8;
+}
+
+.follow-nickname {
+  margin-left: 10px;
+  color: rgba(100, 100, 100, 0.5);
+  font-size: 10px;
+}
+
+.follow-btn {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.post .new-post {
+  height: 30px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 25%;
+  right: 20px;
+}
+
+.post .current-profile {
+  position: absolute;
+  top: 30%;
+  right: 30px;
+  font-size: 20px;
+}
+
+.private-profile {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.private-profile > .lock-user {
+  font-size: 28px;
+}
+
+.private-profile > p {
+  color: grey;
+}
+
+.edit-profile {
+  font-size: 14px;
+  width: 80%;
+  margin-top: 10%;
+}
+
+.logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.update-btn {
+  width: 100%;
+}
+
+.edit-profile-page input, .edit-profile-page textarea {
+  font-size: 14px;
+}
+
+.edit-profile-page .at-relative {
+  position: relative;
+}
+
+.edit-profile-page .at {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+}
+
+.edit-profile-error-messages {
+  margin-top: 10px;
+}
+
+

@@ -1,0 +1,70 @@
+
+<div class="row">
+  <div class="col col-3 profile-info">
+    <div class="border-img">
+      <div class="profile-picture">
+        <img src="/imgs/placeholder.jpeg" alt="Profile Picture">
+      </div>
+    </div>
+    <h3 class="name"><%= fullName(user.firstName, user.lastName) %></h3>
+    <p class="city"><%= city(user) %></p>
+
+    <div class="info-div">
+        <div>
+          <ul class="info">
+            <li>Posts</li>
+            <li><%= posts.length %></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="info">
+            <li>Followers</li>
+            <li><%= followers.length %></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="info">
+            <li>Following</li>
+            <li><%= following.length %></li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+
+    <div class="follow-btn-wrapper">
+      <%- followButton(currentUser, user) %>
+    </div>
+
+    <h5 class="nickname"><%= instaNickname(user.nickname) %></h5>
+    <%- resume(user) %>
+  </div>
+  <div class="col col-6 profile-posts">
+    <h5 class="current-info">Posts</h5>
+    <div class="the-posts">
+      <% if (user.status === 'private' && user._id.toString() != currentUser._id.toString() && !currentUser.following.includes(user._id)) { %>
+        <%- include('../partials/private') %>
+      <% } else { %>
+        <%- include('../partials/posts'), { posts: posts } %>
+      <% } %>
+    </div>
+  </div>
+  <div class="col col-3">
+    <div class="profile-choice">
+      <% if (user._id.toString() == currentUser._id.toString()) { %>
+        <a href="/users/<%= currentUser._id %>/edit" class="btn btn-primary edit-profile">Edit Profile</a>
+      <% } %>
+      <div class="choices adjust-width" data-id="<%= user._id %>" data-current="<%= currentUser._id %>">
+        <a href="#" data-id="posts" class="selected possibilities">Posts <i class="far fa-plus-square icon"></i></a>
+        <a href="#" data-id="likes" class="possibilities">Likes <i class="far fa-heart icon"></i></a>
+        <a href="#" data-id="followers" class="possibilities">Followers <i class="fas fa-user-friends icon"></i></a>
+        <a href="#" data-id="following" class="possibilities">Following <i class="fas fa-user-friends icon"></i></a>
+      </div>
+      <br>
+      <% if (user._id.toString() == currentUser._id.toString()) { %>
+      <div class="adjust-width logout">
+        <a href="/auth/logout" class="possibilities">Logout <i class="fas fa-door-open"></i></a>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>

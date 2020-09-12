@@ -1,0 +1,28 @@
+<% if (posts.length > 0) { %>
+  <% posts.forEach(post => { %>
+    <div class="post" id="<%= post._id %>">
+      <div class="info">
+        <img src="/imgs/placeholder.jpeg" alt="profile-picture" class="card-photo">
+        <a href="/users/<%= post.user._id %>/profile"><%= post.user.nickname %></a>
+        <i class="fas fa-check-circle verified"></i>
+      </div>
+      <div class="body">
+        <%= post.body %>
+      </div>
+      <div class="action">
+        <div class="first">
+          <%- likeButton(currentUser, post) %>
+          <i class="far fa-comment"></i>
+          <i class="far fa-paper-plane"></i>
+        </div>
+        <div class="second">
+          <i class="far fa-bookmark"></i>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+<% } else { %>
+  <div class="private-profile">
+    <h3>No Data</h3>
+  </div>
+<% } %>
